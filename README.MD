@@ -9,8 +9,6 @@
 This repository contains my personal NixOS configuration, managed with **flakes**.  
 I use it to manage multiple machines at home — including my wife's PC.
 
-To apply the configuration, simply run:
-
 ## Secrets Management
 
 I use [sops-nix](https://github.com/Mic92/sops-nix) to securely manage secrets, such as user passwords, directly within the NixOS configuration.
