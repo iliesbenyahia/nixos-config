@@ -74,8 +74,7 @@
 
           modules = [
             ./amelie-pc/configuration.nix
-            ./amelie-pc/hardware-configuration.nix
-            ./ilies-pc/nvidia.nix
+            ./amelie-pc/nvidia.nix
             ./desktop-environments/kde.nix
           ] ++ commonModules ;
         };
