@@ -1,1 +1,2 @@
+nix-collect-garbage
 nixos-rebuild switch --flake github:iliesbenyahia/nixos-config
