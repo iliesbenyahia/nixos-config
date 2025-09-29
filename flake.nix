@@ -69,8 +69,16 @@
         ] ++ commonModules ;
         };
 
-        amelie-pc =  nixpkgs.lib.nixosSystem {
+        amelie-pc =  nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
+          specialArgs = let
+             inherit system;
+          in {
+              pkgs-unstable = import nixpkgs-unstable {
+                  inherit system; 
+                  config.allowUnfree = true;
+              };
+          };
 
           modules = [
             ./amelie-pc/configuration.nix
