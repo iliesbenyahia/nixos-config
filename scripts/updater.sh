@@ -1,1 +1,1 @@
-nixos-rebuild switch --flake /etc/nixos
+nixos-rebuild switch --flake github:iliesbenyahia/nixos-config

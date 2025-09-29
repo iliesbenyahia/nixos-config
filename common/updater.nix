@@ -2,7 +2,9 @@
 let 
     update-system = pkgs.writeShellApplication {
         name = "update-system";
-        runtimeInputs = [];
+        runtimeInputs = with pkgs; [
+            nixos-rebuild
+        ];
         text = builtins.readFile ../scripts/updater.sh;
     };
 in
