@@ -12,7 +12,6 @@
         };
 
    };
-   kernelPackages = pkgs.linuxPackages_6_16;
    };
 
    time.timeZone = "Europe/Paris";

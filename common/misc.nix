@@ -18,6 +18,7 @@
   services.printing.enable = true;
 
   services.flatpak.enable = true;
+  
   # sound
   services.pipewire = {
      enable = true;
@@ -27,6 +28,13 @@
   hardware.bluetooth.enable = true; 
   hardware.bluetooth.powerOnBoot = true; 
 
+  services.xserver.xkb.layout = "fr";
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 80 443 22 ];
+  };
   
 }

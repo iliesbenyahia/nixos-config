@@ -9,7 +9,6 @@
 
   environment.systemPackages = with pkgs-unstable; [ 
     pkgs-unstable.r2modman
-    pkgs-unstable.ankama-launcher
   ];
   
 }
