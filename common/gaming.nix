@@ -8,7 +8,7 @@
   };
 
   environment.systemPackages = with pkgs-unstable; [ 
-    pkgs-unstable.r2modman
+    r2modman
   ];
   
 }
