@@ -3,7 +3,7 @@ let
     update-system = pkgs.writeShellApplication {
         name = "update-system";
         runtimeInputs = with pkgs; [
-            nix-collect-garbage
+            nix
             nixos-rebuild
         ];
         text = builtins.readFile ../scripts/updater.sh;
