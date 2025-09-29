@@ -33,8 +33,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   networking.firewall = {
-    enable = true;
-    allowedTCPPorts = [ 80 443 22 2810 ];
+    enable = false;
   };
 
   services.openssh = {
