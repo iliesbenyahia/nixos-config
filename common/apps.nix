@@ -6,7 +6,7 @@
     hunspell 
     hunspellDicts.en_US
     hunspellDicts.fr-any
-    pkgs.onlyoffice-bin
+    pkgs.onlyoffice-desktopeditors
     vlc
     thunderbird
     discord
