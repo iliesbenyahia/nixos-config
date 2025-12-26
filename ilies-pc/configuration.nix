@@ -16,7 +16,7 @@
 
   home-manager = {
     users = {
-      "ilies" = import ./home-manager/home.nix;
+      "ilies" = import ./home.nix;
     };
   };
 
