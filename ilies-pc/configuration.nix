@@ -1,5 +1,5 @@
 
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, home-manager, ... }:
 {
   imports =
   [ 
@@ -13,6 +13,12 @@
   programs.zsh.enable = true;
 
   system.stateVersion = "25.05"; 
+
+  home-manager = {
+    users = {
+      "ilies" = import ./home-manager/home.nix;
+    };
+  };
 
 }
 

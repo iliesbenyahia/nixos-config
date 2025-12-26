@@ -16,11 +16,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, lanzaboote, sops-nix, ... }: 
+  outputs = { self, nixpkgs, nixpkgs-unstable, lanzaboote, sops-nix, home-manager, ... }: 
   let 
-    commonModules = [ sops-nix.nixosModules.sops ] ++ nixpkgs.lib.filesystem.listFilesRecursive ./common;
+    commonModules = [ sops-nix.nixosModules.sops home-manager.nixosModules.default ] ++ nixpkgs.lib.filesystem.listFilesRecursive ./common;
   in  
   {
 
@@ -66,6 +72,7 @@
             ./ilies-pc/configuration.nix
             ./ilies-pc/nvidia.nix
             ./desktop-environments/kde.nix
+
         ] ++ commonModules ;
         };
 
