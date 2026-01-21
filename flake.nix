@@ -71,7 +71,7 @@
             
             ./ilies-pc/configuration.nix
             ./ilies-pc/nvidia.nix
-            ./desktop-environments/kde.nix
+            ./desktop-environments/cosmic.nix
 
         ] ++ commonModules ;
         };
